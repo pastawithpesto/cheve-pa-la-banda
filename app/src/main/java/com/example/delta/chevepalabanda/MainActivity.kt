@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         var leibol: TextView  = findViewById<TextView>(R.id.tv)
 
         caguamear.setOnClickListener{
-            Toast.makeText(this, "clicked", Toast.LENGTH_LONG ).show()
+            Toast.makeText(this, "Caguameale!", Toast.LENGTH_LONG ).show()
+            try{
             // Cantidades de los pomos
             val ml_mofle: EditText = findViewById<EditText>(R.id.mofle_cantidad)
             val ml_mofle_str = ml_mofle.text.toString()
@@ -64,6 +65,12 @@ class MainActivity : AppCompatActivity() {
             var msj = min
 
             leibol.setText(mensaje + msj.toString() + "$/Litro")
+
+            }
+            catch(e: Exception){
+                Toast.makeText(this, "LLENAME TODA <3", Toast.LENGTH_LONG ).show()
+                //Toast.makeText(this, e.toString(), Toast.LENGTH_LONG ).show() // Es posible agregarlo para debuggear
+            }
         }
     }
 }
